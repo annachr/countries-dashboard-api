@@ -1,38 +1,68 @@
-.App {
-  text-align: center;
+:root {
+  --font-weight-light: 300;
+  --font-weight-bolder: 600;
+  --font-weight-bold: 800;
+  --body-background-color: hsl(207, 26%, 17%);
+  --element-background-color: hsl(209, 23%, 22%);
+  --text-color: hsl(0, 0%, 90%);
+  --element-border-radius: 5px
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Nunito Sans', sans-serif;
+  color: var(--text-color)
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  background-color: var(--body-background-color);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+.header {
+  width: 100%;
+  height: 10vh;
+  padding: 1.8rem;
+  background-color: var(--element-background-color);
 }
 
-.App-link {
-  color: #61dafb;
+.searchField {
+  width: 90%;
+  height: 6vh;
+  margin: 1.2rem;
+  padding-left: .6rem;
+  background-color: var(--element-background-color);
+  border-radius: var(--element-border-radius);
+  border: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+::placeholder {
+  color: var(--text-color)
+}
+
+.select {
+  width: 50%;
+  height: 6vh;
+  margin: .6rem 1.2rem;
+  padding-left: .6rem;
+  background-color: var(--element-background-color);
+  border-radius: var(--element-border-radius);
+  border: none;
+}
+
+.countrySection {
+  display: grid;
+  grid-gap: 2rem;
+  margin-top: .6rem
+
+}
+
+.countryCard {
+  width: 75%;
+  height: 300px;
+  margin: 0 auto;
+  background-color: var(--element-background-color);
+  border-radius: var(--element-border-radius);
 }
