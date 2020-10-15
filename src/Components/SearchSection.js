@@ -4,7 +4,7 @@ import Filter from './Filter'
 
 const SearchSection = () => {
   return(
-    <div>
+    <div className="searchSection">
       <Search />
       <Filter />
     </div>
