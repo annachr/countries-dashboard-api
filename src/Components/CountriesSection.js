@@ -1,23 +1,14 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useState } from 'react'
 import CountryCard from './CountryCard'
+import {CountryContext} from '../countriesContext'
 
 const CountriesSection = () => {
-  const [countries, setCountries] = useState([])
-
-  useEffect(() => {
-    const fetchFunction = async () => {
-      const country = await fetch('https://restcountries.eu/rest/v2/all?fields=name;population;region;capital;flag')
-                      .then(res => res.json())
-      setCountries(country)
-    }
-    fetchFunction()
-  }, [])
-
+  const {countries} = useContext(CountryContext)
   const singleCountry = countries.map(country => <CountryCard key={country.name} {...country} />)
 
   return(
     <div className="countrySection">
-      {singleCountry}
+     {singleCountry}
     </div>
   )
 }

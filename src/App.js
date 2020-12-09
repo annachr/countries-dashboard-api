@@ -7,8 +7,8 @@ import MainSection from './Components/MainSection'
 function App() {
   return (
     <>
-      <Header />
-      <MainSection />
+        <Header />
+        <MainSection />
     </>
   );
 }

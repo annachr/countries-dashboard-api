@@ -9,17 +9,16 @@ const CountryCard = ({
 }) => {
   return(
     <div className="countryCard">
-      <div>
+      <a href={`https://en.wikipedia.org/wiki/${name}`} className="countryDetails">
         <img className="flagImg" src={flag} alt="country flag"/>
-      </div>
-      <div className="countryDetails">
         <p className="countryName">{name}</p>
-        <p><span className="details">Population:</span> {population}</p>
-        <p><span className="details">Region:</span> {region}</p>
-        <p><span className="details">Capital:</span> {capital}</p>
-      </div>
+        <p><span className="details">Population:</span> {population === 0 ? "N/A" : population}</p>
+        <p><span className="details">Region:</span> {region === "" ? "other" : region}</p>
+        <p><span className="details">Capital:</span> {capital === "" ? "N/A" : capital}</p>
+      </a>
     </div>
   )
 }
+
 
 export default CountryCard
