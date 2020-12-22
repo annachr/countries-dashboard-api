@@ -124,6 +124,10 @@ a {
   cursor: pointer;
 }
 
+.countryDetailsCard {
+
+}
+
 @media(min-width: 768px) {
   .searchSection {
     display: flex;

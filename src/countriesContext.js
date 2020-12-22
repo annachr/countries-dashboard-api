@@ -5,8 +5,7 @@ function CountryContextProvider(props) {
   const [countries, setCountries] = useState([])
   const [regions, setRegions] = useState([])
   const [countriesToDisplay, setCountriesToDisplay] = useState([])
-  const [check, setCheck] = useState(false)
-
+  const [isFiltered, setIsFiltered] = useState(false)
 
   useEffect(() => {
     const fetchFunction = async () => {
@@ -28,13 +27,22 @@ function CountryContextProvider(props) {
 
   function handleChange(event) {
     const filtered = countries.filter(country => country.region === event.target.value)
-    setCountries(filtered)
-    setCheck(true)
+    if(event.target.value === "Filter by Region") {
+      setIsFiltered(false)
+    } else {
+      setIsFiltered(true)
+    }
+    setCountriesToDisplay(filtered)
+    // if(event.target.value === "Filter by Region") {
+    //   setCountriesToDisplay(countries)
+    // } else {
+    //   setCountriesToDisplay(filtered)
+    // }
   }
 
 
   return (
-    <CountryContext.Provider value={{countries, setCountries, regions, check, handleChange}}>
+    <CountryContext.Provider value={{countries, regions, countriesToDisplay, isFiltered, handleChange}}>
       {props.children}
     </CountryContext.Provider>
   )
