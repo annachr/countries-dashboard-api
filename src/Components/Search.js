@@ -1,22 +1,19 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext } from 'react'
 import {CountryContext} from '../countriesContext'
 
 function Search() {
-  const [query, setQuery] = useState("")
-  const {handleChange} = useContext(CountryContext)
+  const {handleInputChange, query} = useContext(CountryContext)
   // const [searchResult, setSearchResult] = useState([])
-  // const handleInputChange = (e) => {
-  //   setQuery(e.target.value)
-  // }
+
   return (
     <>
       <input
       className="searchField"
       type="text"
-      value={query}
+      value={query.charAt(0).toUpperCase() + query.slice(1)}
       name="query"
-      onChange={handleChange}
-      placeholder="Search for a country..."
+      onChange={handleInputChange}
+      placeholder="Search for a country or a capital..."
       />
     </>
   )

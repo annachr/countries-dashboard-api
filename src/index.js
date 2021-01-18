@@ -5,7 +5,7 @@ import App from './App';
 import {CountryContextProvider} from './countriesContext'
 
 import {BrowserRouter as Router} from "react-router-dom"
-import * as serviceWorker from './serviceWorker';
+
 
 ReactDOM.render(
   <React.StrictMode>
@@ -18,4 +18,3 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-serviceWorker.unregister();
