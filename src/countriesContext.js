@@ -76,16 +76,16 @@ function CountryContextProvider(props) {
 
   function handleSortUp() {
     setSortingOrder(true)
-    const sorted = countries.sort(handlePopulation)
-    // setCountries(sorted)
+    const sorted = isFiltered ? countriesToDisplay.sort(handlePopulation) : countries.sort(handlePopulation)
     setCountriesToDisplay(sorted)
+    // setCountries(sorted)
   }
 
   function handleSortDown() {
     setSortingOrder(false)
-    const sorted = countries.sort(handlePopulation)
-    // setCountries(sorted)
+    const sorted = isFiltered ? countriesToDisplay.sort(handlePopulation) : countries.sort(handlePopulation)
     setCountriesToDisplay(sorted)
+    // setCountries(sorted)
   }
 
   return (
