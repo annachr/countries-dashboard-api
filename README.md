@@ -1,5 +1,12 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Responsive dashboard of world counties with filters by Name and Continent also with sorting by population.
+This version uses React Context. There is also a version which uses Redux for state management.
+
+![countries_1](https://user-images.githubusercontent.com/60232927/107774134-e6a67280-6d3e-11eb-9067-7b314ac179e0.png)
+![countries_2](https://user-images.githubusercontent.com/60232927/107774139-e73f0900-6d3e-11eb-922a-1fdb5a5c8092.png)
+![countries_3](https://user-images.githubusercontent.com/60232927/107774140-e73f0900-6d3e-11eb-836a-6cc8f245dbe4.png)
+
 ## Available Scripts
 
 In the project directory, you can run:
