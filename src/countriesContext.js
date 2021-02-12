@@ -43,7 +43,9 @@ function CountryContextProvider(props) {
   }
 
   function handleChange(event) {
-    const filtered = countries.filter(country => country.region === event.target.value)
+    const filtered = isFiltered
+      ? countriesToDisplay.filter(country => country.region === event.target.value)
+      : countries.filter(country => country.region === event.target.value)
     if(event.target.value === "Filter by Region") {
       setIsFiltered(false)
     } else {

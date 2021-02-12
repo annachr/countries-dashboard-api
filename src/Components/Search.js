@@ -3,7 +3,6 @@ import {CountryContext} from '../countriesContext'
 
 function Search() {
   const {handleInputChange, query} = useContext(CountryContext)
-  // const [searchResult, setSearchResult] = useState([])
 
   return (
     <>
